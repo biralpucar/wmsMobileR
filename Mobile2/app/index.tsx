@@ -1,7 +1,26 @@
-import { Redirect } from 'expo-router';
-import { useEffect, useState } from 'react';
-import { ActivityIndicator, View, StyleSheet } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useEffect } from 'react';
+import { useRouter } from 'expo-router';
+import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
+
+export default function Index() {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Biraz gecikme ile login'e yönlendir
+    const timer = setTimeout(() => {
+      router.replace('/login');
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [router]);
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Yönlendiriliyor...</Text>
+      <ActivityIndicator size="large" color="#007AFF" />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -10,35 +29,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#fff',
   },
+  text: {
+    marginBottom: 20,
+    fontSize: 16,
+    color: '#333',
+  },
 });
-
-export default function Index() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    checkAuth();
-  }, []);
-
-  const checkAuth = async () => {
-    try {
-      const token = await AsyncStorage.getItem('jwt_token');
-      setIsAuthenticated(!!token);
-    } catch (error) {
-      console.error('Auth check error:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  if (isLoading) {
-    return (
-      <View style={styles.container}>
-        <ActivityIndicator size="large" color="#007AFF" />
-      </View>
-    );
-  }
-
-  return isAuthenticated ? <Redirect href="/home" /> : <Redirect href="/login" />;
-}
-

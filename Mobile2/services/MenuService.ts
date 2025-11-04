@@ -2,11 +2,11 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { API_BASE_URL, API_ENDPOINTS } from '../config/apiConfig';
 import { ApiResponse } from '../types/ApiResponse';
-import { MobilemenuHeaderDto, MobilemenuLineDto, MobileUserGroupMatchDto } from '../types/Menu';
+import { MobilemenuHeaderDto, MobilemenuLineDto } from '../types/Menu';
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
   },
@@ -18,21 +18,31 @@ apiClient.interceptors.request.use(async (config) => {
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
+  console.log('Menu API Request:', config.method?.toUpperCase(), config.url);
   return config;
 });
 
 export const MenuService = {
   async getActiveMenus(): Promise<ApiResponse<MobilemenuHeaderDto[]>> {
     try {
-      const response = await apiClient.get<ApiResponse<MobilemenuHeaderDto[]>>(
-        API_ENDPOINTS.MENU.HEADER_ACTIVE
-      );
+      // Backend route: api/[controller] = api/MobilemenuHeader, endpoint: /active
+      const endpoint = '/MobilemenuHeader/active';
+      console.log('MenuService - Full URL:', `${API_BASE_URL}${endpoint}`);
+      
+      const response = await apiClient.get<ApiResponse<MobilemenuHeaderDto[]>>(endpoint);
       return response.data;
     } catch (error: any) {
       console.error('Get active menus error:', error);
+      console.error('Error details:', {
+        message: error.message,
+        url: error.config?.url,
+        baseURL: error.config?.baseURL,
+        fullURL: `${error.config?.baseURL}${error.config?.url}`,
+        status: error.response?.status
+      });
       return {
         success: false,
-        message: error.response?.data?.message || 'Get menus failed',
+        message: error.response?.data?.message || error.message || 'Menü yüklenemedi',
         statusCode: error.response?.status || 500,
         data: undefined
       };
@@ -42,36 +52,34 @@ export const MenuService = {
   async getMenuLinesByHeaderId(headerId: number): Promise<ApiResponse<MobilemenuLineDto[]>> {
     try {
       const response = await apiClient.get<ApiResponse<MobilemenuLineDto[]>>(
-        `${API_ENDPOINTS.MENU.LINE_BY_HEADER}/${headerId}`
+        `/MobilemenuLine/by-header/${headerId}`
       );
       return response.data;
     } catch (error: any) {
       console.error('Get menu lines error:', error);
       return {
         success: false,
-        message: error.response?.data?.message || 'Get menu lines failed',
+        message: error.response?.data?.message || 'Menü satırları yüklenemedi',
         statusCode: error.response?.status || 500,
         data: undefined
       };
     }
   },
 
-  async getUserMenuGroups(userId: number): Promise<ApiResponse<MobileUserGroupMatchDto[]>> {
+  async getUserMenuGroups(userId: number): Promise<ApiResponse<any[]>> {
     try {
-      const response = await apiClient.get<ApiResponse<MobileUserGroupMatchDto[]>>(
-        `${API_ENDPOINTS.MENU.USER_GROUP_BY_USER}/${userId}`
+      const response = await apiClient.get<ApiResponse<any[]>>(
+        `/MobileUserGroupMatch/by-user/${userId}`
       );
       return response.data;
     } catch (error: any) {
       console.error('Get user menu groups error:', error);
       return {
         success: false,
-        message: error.response?.data?.message || 'Get user menu groups failed',
+        message: error.response?.data?.message || 'Kullanıcı menü grupları yüklenemedi',
         statusCode: error.response?.status || 500,
         data: undefined
       };
     }
   }
 };
-
-

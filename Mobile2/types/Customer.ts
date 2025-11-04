@@ -1,0 +1,46 @@
+// Customer (Cari) DTO - Backend CariDto ile eşleşen TypeScript interface
+export interface CustomerDto {
+  subeKodu: number;
+  isletmeKodu: number;
+  cariKod: string;
+  cariTel?: string;
+  cariIl?: string;
+  ulkeKodu?: string;
+  cariIsim?: string;
+  cariTip?: string;
+  grupKodu?: string;
+  raporKodu1?: string;
+  raporKodu2?: string;
+  raporKodu3?: string;
+  raporKodu4?: string;
+  raporKodu5?: string;
+  cariAdres?: string;
+  cariIlce?: string;
+  vergiDairesi?: string;
+  vergiNumarasi?: string;
+  fax?: string;
+  postaKodu?: string;
+  detayKodu?: number;
+  nakliyeKatsayisi?: number;
+  riskSiniri?: number;
+  teminati?: number;
+  cariRisk?: number;
+  ccRisk?: number;
+  saRisk?: number;
+  scRisk?: number;
+  cmBorct?: number;
+  cmAlact?: number;
+  cmRapTarih?: string;
+  kosulKodu?: string;
+  iskontoOrani?: number;
+  vadeGunu?: number;
+  listeFiati?: number;
+  acik1?: string;
+  acik2?: string;
+  acik3?: string;
+  mKod?: string;
+  dovizTipi?: number;
+  dovizTuru?: number;
+  hesapTutmaSekli?: string;
+  dovizLimi?: string;
+}

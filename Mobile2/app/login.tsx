@@ -1,195 +1,201 @@
 import { useState } from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  Alert,
-  KeyboardAvoidingView,
-  Platform,
-  ActivityIndicator,
-  StyleSheet
-} from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, KeyboardAvoidingView, Platform } from 'react-native';
 import { useRouter } from 'expo-router';
 import { AuthService } from '../services/AuthService';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  content: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingHorizontal: 24,
-  },
-  logoContainer: {
-    alignItems: 'center',
-    marginBottom: 48,
-  },
-  logo: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#2563eb',
-    marginBottom: 8,
-  },
-  subtitle: {
-    color: '#6b7280',
-    fontSize: 14,
-  },
-  form: {
-    marginBottom: 24,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: '600',
-    marginBottom: 16,
-    color: '#374151',
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: '#d1d5db',
-    borderRadius: 8,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    marginBottom: 16,
-    backgroundColor: '#fff',
-    fontSize: 16,
-  },
-  inputLast: {
-    marginBottom: 24,
-  },
-  button: {
-    backgroundColor: '#2563eb',
-    borderRadius: 8,
-    paddingVertical: 16,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#fff',
-    fontWeight: '600',
-    fontSize: 16,
-  },
-  demoBox: {
-    backgroundColor: '#eff6ff',
-    borderRadius: 8,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: '#bfdbfe',
-  },
-  demoTitle: {
-    color: '#1e3a8a',
-    fontWeight: '600',
-    marginBottom: 8,
-  },
-  demoText: {
-    color: '#2563eb',
-    fontSize: 14,
-  },
-});
-
-export default function LoginScreen() {
-  const router = useRouter();
-  const [email, setEmail] = useState('');
+export default function Login() {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const handleLogin = async () => {
-    console.log('Login button clicked');
-    if (!email.trim() || !password.trim()) {
-      Alert.alert('Hata', 'Email ve şifre gereklidir');
+    if (!username || !password) {
+      Alert.alert('Uyarı', 'Kullanıcı adı ve şifre gerekli');
       return;
     }
 
-    console.log('Starting login...', { email: email.trim() });
-    setIsLoading(true);
+    setLoading(true);
     try {
-      const response = await AuthService.login(email.trim(), password.trim());
-      console.log('Login response:', response);
-      
-      if (response.success && response.data) {
-        console.log('Login successful, navigating to home');
+      const result = await AuthService.login(username, password);
+      if (result.success) {
         router.replace('/home');
       } else {
-        console.log('Login failed:', response.message);
-        Alert.alert('Giriş Hatası', response.message || 'Giriş başarısız');
+        Alert.alert('Hata', result.message || 'Giriş başarısız');
       }
     } catch (error: any) {
-      console.error('Login exception:', error);
-      Alert.alert('Hata', error.message || 'Bir hata oluştu');
+      console.error('Login error:', error);
+      Alert.alert('Hata', error.message || 'Giriş yapılırken bir hata oluştu');
     } finally {
-      setIsLoading(false);
+      setLoading(false);
     }
   };
 
   return (
-    <KeyboardAvoidingView
+    <KeyboardAvoidingView 
+      style={styles.container} 
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      style={styles.container}
     >
       <View style={styles.content}>
-        {/* Logo/Title */}
-        <View style={styles.logoContainer}>
-          <Text style={styles.logo}>
-            WMS Mobile
-          </Text>
-          <Text style={styles.subtitle}>
-            Depo Yönetim Sistemi
-          </Text>
+        {/* Logo Section */}
+        <View style={styles.logoSection}>
+          <View style={styles.logoContainer}>
+            <Text style={styles.logoIcon}>📦</Text>
+          </View>
+          <Text style={styles.title}>WMS Mobile</Text>
+          <Text style={styles.subtitle}>Depo Yönetim Sistemi</Text>
         </View>
 
-        {/* Login Form */}
-        <View style={styles.form}>
-          <Text style={styles.title}>
-            Giriş Yap
-          </Text>
-          
-          <TextInput
-            style={styles.input}
-            placeholder="Email veya Kullanıcı Adı"
-            placeholderTextColor="#9ca3af"
-            value={email}
-            onChangeText={setEmail}
-            keyboardType="email-address"
-            autoCapitalize="none"
-            autoCorrect={false}
-            editable={!isLoading}
-          />
-          
-          <TextInput
-            style={[styles.input, styles.inputLast]}
-            placeholder="Şifre"
-            placeholderTextColor="#9ca3af"
-            value={password}
-            onChangeText={setPassword}
-            secureTextEntry
-            editable={!isLoading}
-          />
-          
+        {/* Form Section */}
+        <View style={styles.formSection}>
+          <View style={styles.inputContainer}>
+            <Text style={styles.inputLabel}>Kullanıcı Adı</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Kullanıcı adınızı girin"
+              placeholderTextColor="#9ca3af"
+              value={username}
+              onChangeText={setUsername}
+              autoCapitalize="none"
+              autoCorrect={false}
+              editable={!loading}
+            />
+          </View>
+
+          <View style={styles.inputContainer}>
+            <Text style={styles.inputLabel}>Şifre</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Şifrenizi girin"
+              placeholderTextColor="#9ca3af"
+              value={password}
+              onChangeText={setPassword}
+              secureTextEntry
+              autoCapitalize="none"
+              autoCorrect={false}
+              editable={!loading}
+            />
+          </View>
+
           <TouchableOpacity
-            style={styles.button}
+            style={[styles.button, loading && styles.buttonDisabled]}
             onPress={handleLogin}
-            disabled={isLoading}
+            disabled={loading}
+            activeOpacity={0.8}
           >
-            {isLoading ? (
-              <ActivityIndicator color="white" />
-            ) : (
-              <Text style={styles.buttonText}>
-                Giriş Yap
-              </Text>
-            )}
+            <Text style={styles.buttonText}>
+              {loading ? 'Giriş yapılıyor...' : 'Giriş Yap'}
+            </Text>
           </TouchableOpacity>
         </View>
 
-        {/* Demo credentials */}
-        <View style={styles.demoBox}>
-          <Text style={styles.demoTitle}>
-            Demo Giriş Bilgileri:
-          </Text>
-          <Text style={styles.demoText}>Email: admin@verii.com</Text>
-          <Text style={styles.demoText}>Şifre: Veriipass123!</Text>
+        {/* Footer */}
+        <View style={styles.footer}>
+          <Text style={styles.footerText}>© 2024 WMS System</Text>
         </View>
       </View>
     </KeyboardAvoidingView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f8fafc',
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'space-between',
+    padding: 24,
+  },
+  logoSection: {
+    alignItems: 'center',
+    marginTop: 60,
+    marginBottom: 40,
+  },
+  logoContainer: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#ffffff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 24,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    elevation: 8,
+  },
+  logoIcon: {
+    fontSize: 48,
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#1e293b',
+    marginBottom: 8,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#64748b',
+    fontWeight: '500',
+  },
+  formSection: {
+    width: '100%',
+  },
+  inputContainer: {
+    marginBottom: 20,
+  },
+  inputLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#334155',
+    marginBottom: 8,
+    marginLeft: 4,
+  },
+  input: {
+    backgroundColor: '#ffffff',
+    borderWidth: 1.5,
+    borderColor: '#e2e8f0',
+    borderRadius: 12,
+    padding: 16,
+    fontSize: 16,
+    color: '#1e293b',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.05,
+    shadowRadius: 3,
+    elevation: 2,
+  },
+  button: {
+    backgroundColor: '#2563eb',
+    borderRadius: 12,
+    padding: 18,
+    alignItems: 'center',
+    marginTop: 8,
+    shadowColor: '#2563eb',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  buttonDisabled: {
+    opacity: 0.6,
+    shadowOpacity: 0.1,
+  },
+  buttonText: {
+    color: '#ffffff',
+    fontSize: 16,
+    fontWeight: '700',
+    letterSpacing: 0.5,
+  },
+  footer: {
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  footerText: {
+    fontSize: 12,
+    color: '#94a3b8',
+  },
+});
