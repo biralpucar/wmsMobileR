@@ -1,0 +1,88 @@
+## .NET ##
+bin/
+obj/
+*.user
+*.suo
+*.cache
+.vs/
+.vscode/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.tmp
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Node / React Native / Expo ##
+node_modules/
+npm-debug.log
+yarn-error.log
+.expo/
+.expo-shared/
+dist/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+## Mobile2 specific
+Mobile2/.expo/
+Mobile2/node_modules/
+Mobile2/.expo-shared/
+Mobile2/web-build/
+
+## Mobile specific
+Mobile/.expo/
+Mobile/node_modules/
+Mobile/.expo-shared/
+Mobile/web-build/
+
+## OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+## Environment files
+.env
+.env.local
+.env.*.local
+appsettings.Development.json
+
+## Temporary files
+.temp_build/
+*.tmp
+*.temp
+
+## Logs
+*.log
+logs/
+
+## Misc
+.config/

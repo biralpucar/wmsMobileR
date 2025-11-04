@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Authentication Messages -->
+  <data name="UserNotFound" xml:space="preserve">
+    <value>User not found</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Invalid username or password</value>
+  </data>
+  <data name="UserRegisteredSuccessfully" xml:space="preserve">
+    <value>User registered successfully</value>
+  </data>
+  <data name="LoginSuccessful" xml:space="preserve">
+    <value>Login successful</value>
+  </data>
+  <data name="TokenGenerationFailed" xml:space="preserve">
+    <value>Token generation failed</value>
+  </data>
+  <data name="UserAlreadyExists" xml:space="preserve">
+    <value>User already exists</value>
+  </data>
+  <data name="RegistrationFailed" xml:space="preserve">
+    <value>Registration failed</value>
+  </data>
+  <data name="UnauthorizedAccess" xml:space="preserve">
+    <value>Unauthorized access</value>
+  </data>
+  
+  <!-- General Messages -->
+  <data name="InternalServerError" xml:space="preserve">
+    <value>An internal server error occurred</value>
+  </data>
+  <data name="OperationSuccessful" xml:space="preserve">
+    <value>Operation completed successfully</value>
+  </data>
+  <data name="ValidationError" xml:space="preserve">
+    <value>Validation error occurred</value>
+  </data>
+  
+  <!-- ERP Service Messages -->
+  <data name="OnHandQuantityRetrievedSuccessfully" xml:space="preserve">
+    <value>OnHandQuantity information retrieved successfully</value>
+  </data>
+  <data name="OnHandQuantityRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving OnHandQuantity information</value>
+  </data>
+  <data name="CariRetrievedSuccessfully" xml:space="preserve">
+    <value>Customer information retrieved successfully</value>
+  </data>
+  <data name="CariRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving customer information</value>
+  </data>
+  <data name="StokRetrievedSuccessfully" xml:space="preserve">
+    <value>Stock information retrieved successfully</value>
+  </data>
+  <data name="StokRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving stock information</value>
+  </data>
+  <data name="DepoRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse information retrieved successfully</value>
+  </data>
+  <data name="DepoRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving warehouse information</value>
+  </data>
+  <data name="ProjeRetrievedSuccessfully" xml:space="preserve">
+    <value>Project information retrieved successfully</value>
+  </data>
+  <data name="ProjeRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving project information</value>
+  </data>
+  <data name="CustomerOrderRetrievedSuccessfully" xml:space="preserve">
+    <value>Customer order information retrieved successfully</value>
+  </data>
+  <data name="CustomerOrderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving customer order information</value>
+  </data>
+  <data name="OrderDetailRetrievedSuccessfully" xml:space="preserve">
+    <value>Order detail information retrieved successfully</value>
+  </data>
+  <data name="OrderDetailRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving order detail information</value>
+  </data>
+  <data name="GrHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Header information retrieved successfully</value>
+  </data>
+  <data name="GrHeaderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Header information</value>
+  </data>
+  
+  <!-- GrImportDocument Messages -->
+  <data name="Success" xml:space="preserve">
+    <value>Operation completed successfully</value>
+  </data>
+  <data name="Error_GetAll" xml:space="preserve">
+    <value>Error occurred while retrieving import documents</value>
+  </data>
+  <data name="Error_NotFound" xml:space="preserve">
+    <value>Import document not found</value>
+  </data>
+  <data name="Error_GetById" xml:space="preserve">
+    <value>Error occurred while retrieving import document</value>
+  </data>
+  <data name="Error_GetByHeaderId" xml:space="preserve">
+    <value>Error occurred while retrieving import documents by header ID</value>
+  </data>
+  <data name="Error_Create" xml:space="preserve">
+    <value>Error occurred while creating import document</value>
+  </data>
+  <data name="Error_Update" xml:space="preserve">
+    <value>Error occurred while updating import document</value>
+  </data>
+  <data name="Success_Deleted" xml:space="preserve">
+    <value>Import document deleted successfully</value>
+  </data>
+  <data name="Error_Delete" xml:space="preserve">
+    <value>Error occurred while deleting import document</value>
+  </data>
+  <data name="Error_Exists" xml:space="preserve">
+    <value>Error occurred while checking import document existence</value>
+  </data>
+  <data name="InvalidModelState" xml:space="preserve">
+    <value>Invalid model state</value>
+  </data>
+  <data name="UserNotFoundError" xml:space="preserve">
+    <value>User information not found</value>
+  </data>
+  <data name="ProfileRetrievedSuccessfully" xml:space="preserve">
+    <value>Profile information retrieved successfully</value>
+  </data>
+  
+  <!-- GrLine Messages -->
+  <data name="GrLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Line information retrieved successfully</value>
+  </data>
+  <data name="GrLineRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Line information</value>
+  </data>
+  <data name="GrLineNotFound" xml:space="preserve">
+    <value>Goods Receipt Line not found</value>
+  </data>
+  <data name="GrLineCreatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Line created successfully</value>
+  </data>
+  <data name="GrLineCreateError" xml:space="preserve">
+    <value>Error occurred while creating Goods Receipt Line</value>
+  </data>
+  <data name="GrLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Line updated successfully</value>
+  </data>
+  <data name="GrLineUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Goods Receipt Line</value>
+  </data>
+  <data name="GrLineDeletedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Line deleted successfully</value>
+  </data>
+  <data name="GrLineDeleteError" xml:space="preserve">
+    <value>Error occurred while deleting Goods Receipt Line</value>
+  </data>
+  <data name="GrLineExistsCheckError" xml:space="preserve">
+    <value>Error occurred while checking Goods Receipt Line existence</value>
+  </data>
+  <data name="GrHeaderNotFoundForLine" xml:space="preserve">
+    <value>Goods Receipt Header not found for this line</value>
+  </data>
+  
+  <!-- Additional GrHeader Messages -->
+  <data name="GrHeaderNotFound" xml:space="preserve">
+    <value>Goods Receipt Header not found</value>
+  </data>
+  <data name="GrHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Header created successfully</value>
+  </data>
+  <data name="GrHeaderCreationError" xml:space="preserve">
+    <value>Error occurred while creating Goods Receipt Header</value>
+  </data>
+  <data name="GrHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Header updated successfully</value>
+  </data>
+  <data name="GrHeaderUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Goods Receipt Header</value>
+  </data>
+  <data name="GrHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Header deleted successfully</value>
+  </data>
+  <data name="GrHeaderDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Goods Receipt Header</value>
+  </data>
+  <data name="GrHeaderSoftDeletionError" xml:space="preserve">
+    <value>Error occurred while soft deleting Goods Receipt Header</value>
+  </data>
+  
+  <!-- Additional GrLine Messages -->
+  <data name="GrLineGetAllError" xml:space="preserve">
+    <value>Error occurred while retrieving all Goods Receipt Lines</value>
+  </data>
+  <data name="GrLineGetByIdError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Line by ID</value>
+  </data>
+  <data name="GrLineGetByHeaderIdError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Lines by Header ID</value>
+  </data>
+  <data name="GrLineExistsError" xml:space="preserve">
+    <value>Error occurred while checking Goods Receipt Line existence</value>
+  </data>
+  
+  <!-- Additional GrImportDocument Messages -->
+  <data name="Error_InvalidHeaderId" xml:space="preserve">
+    <value>Invalid Header ID provided</value>
+  </data>
+  <data name="Success_Created" xml:space="preserve">
+    <value>Import document created successfully</value>
+  </data>
+  <data name="Success_Updated" xml:space="preserve">
+    <value>Import document updated successfully</value>
+  </data>
+  
+  <!-- GrImportSerialLine Messages -->
+  <data name="GrImportSerialLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line information retrieved successfully</value>
+  </data>
+  <data name="GrImportSerialLineGetAllError" xml:space="preserve">
+    <value>Error occurred while retrieving all Goods Receipt Import Serial Lines</value>
+  </data>
+  <data name="GrImportSerialLineNotFound" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line not found</value>
+  </data>
+  <data name="GrImportSerialLineGetByIdError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Import Serial Line by ID</value>
+  </data>
+  <data name="GrImportSerialLineGetByImportLineIdError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Import Serial Lines by Import Line ID</value>
+  </data>
+  <data name="GrImportLNotFound" xml:space="preserve">
+    <value>Goods Receipt Import Line not found</value>
+  </data>
+  <data name="GrImportSerialLineCreatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line created successfully</value>
+  </data>
+  <data name="GrImportSerialLineCreateError" xml:space="preserve">
+    <value>Error occurred while creating Goods Receipt Import Serial Line</value>
+  </data>
+  <data name="GrImportSerialLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line updated successfully</value>
+  </data>
+  <data name="GrImportSerialLineUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Goods Receipt Import Serial Line</value>
+  </data>
+  <data name="GrImportSerialLineDeletedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line deleted successfully</value>
+  </data>
+  <data name="GrImportSerialLineDeleteError" xml:space="preserve">
+    <value>Error occurred while deleting Goods Receipt Import Serial Line</value>
+  </data>
+  <data name="GrImportSerialLineExistsCheckCompleted" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line existence check completed</value>
+  </data>
+  <data name="GrImportSerialLineExistsCheckError" xml:space="preserve">
+    <value>Error occurred while checking Goods Receipt Import Serial Line existence</value>
+  </data>
+  
+  <!-- JWT Service Messages -->
+  <data name="TokenGeneratedSuccessfully" xml:space="preserve">
+    <value>Token generated successfully</value>
+  </data>
+  <data name="TokenGenerationError" xml:space="preserve">
+    <value>An error occurred while generating token</value>
+  </data>
+  <data name="TokenGenerationFailedMessage" xml:space="preserve">
+    <value>Token generation failed</value>
+  </data>
+  
+  <!-- Common Service Messages -->
+  <data name="DataRetrievedSuccessfully" xml:space="preserve">
+    <value>Data retrieved successfully</value>
+  </data>
+  <data name="DataCreatedSuccessfully" xml:space="preserve">
+    <value>Data created successfully</value>
+  </data>
+  <data name="DataUpdatedSuccessfully" xml:space="preserve">
+    <value>Data updated successfully</value>
+  </data>
+  <data name="DataDeletedSuccessfully" xml:space="preserve">
+    <value>Data deleted successfully</value>
+  </data>
+  <data name="DataNotFound" xml:space="preserve">
+    <value>Data not found</value>
+  </data>
+  <data name="ErrorRetrievingData" xml:space="preserve">
+    <value>Error occurred while retrieving data</value>
+  </data>
+  <data name="ErrorCreatingData" xml:space="preserve">
+    <value>Error occurred while creating data</value>
+  </data>
+  <data name="ErrorUpdatingData" xml:space="preserve">
+    <value>Error occurred while updating data</value>
+  </data>
+  <data name="ErrorDeletingData" xml:space="preserve">
+    <value>Error occurred while deleting data</value>
+  </data>
+  <data name="ErrorOccurred" xml:space="preserve">
+    <value>An error occurred</value>
+  </data>
+  <data name="RecordNotFound" xml:space="preserve">
+    <value>Record not found</value>
+  </data>
+  <data name="RecordCreatedSuccessfully" xml:space="preserve">
+    <value>Record created successfully</value>
+  </data>
+  <data name="RecordUpdatedSuccessfully" xml:space="preserve">
+    <value>Record updated successfully</value>
+  </data>
+  <data name="RecordDeletedSuccessfully" xml:space="preserve">
+    <value>Record deleted successfully</value>
+  </data>
+  <data name="UpdateSuccess" xml:space="preserve">
+    <value>Update completed successfully</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Delete completed successfully</value>
+  </data>
+  
+  <!-- UserAuthority Service Messages -->
+  <data name="NotFound" xml:space="preserve">
+    <value>Record not found</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Record created successfully</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Record updated successfully</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Record deleted successfully</value>
+  </data>
+  
+  <!-- Additional Service Messages -->
+  <data name="RecordCreatedSuccessfully" xml:space="preserve">
+    <value>Record created successfully</value>
+  </data>
+  <data name="RecordUpdatedSuccessfully" xml:space="preserve">
+    <value>Record updated successfully</value>
+  </data>
+  <data name="RecordDeletedSuccessfully" xml:space="preserve">
+    <value>Record deleted successfully</value>
+  </data>
+  <data name="UpdateSuccess" xml:space="preserve">
+    <value>Update successful</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Delete successful</value>
+  </data>
+  
+  <!-- Auth Controller Messages -->
+  <data name="Error.User.InvalidCredentials" xml:space="preserve">
+    <value>Invalid username or password</value>
+  </data>
+  <data name="Success.User.LoginSuccessful" xml:space="preserve">
+    <value>Login successful</value>
+  </data>
+  <data name="Error.User.LoginFailed" xml:space="preserve">
+    <value>Login failed</value>
+  </data>
+</root>

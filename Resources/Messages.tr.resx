@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Authentication Messages -->
+  <data name="UserNotFound" xml:space="preserve">
+    <value>Kullanıcı bulunamadı</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Geçersiz kullanıcı adı veya şifre</value>
+  </data>
+  <data name="UserRegisteredSuccessfully" xml:space="preserve">
+    <value>Kullanıcı başarıyla kaydedildi</value>
+  </data>
+  <data name="LoginSuccessful" xml:space="preserve">
+    <value>Giriş başarılı</value>
+  </data>
+  <data name="TokenGenerationFailed" xml:space="preserve">
+    <value>Token oluşturma başarısız</value>
+  </data>
+  <data name="UserAlreadyExists" xml:space="preserve">
+    <value>Kullanıcı zaten mevcut</value>
+  </data>
+  <data name="RegistrationFailed" xml:space="preserve">
+    <value>Kayıt işlemi başarısız</value>
+  </data>
+  <data name="UnauthorizedAccess" xml:space="preserve">
+    <value>Yetkisiz erişim</value>
+  </data>
+  
+  <!-- General Messages -->
+  <data name="InternalServerError" xml:space="preserve">
+    <value>Dahili sunucu hatası oluştu</value>
+  </data>
+  <data name="OperationSuccessful" xml:space="preserve">
+    <value>İşlem başarıyla tamamlandı</value>
+  </data>
+  <data name="ValidationError" xml:space="preserve">
+    <value>Doğrulama hatası oluştu</value>
+  </data>
+  
+  <!-- ERP Service Messages -->
+  <data name="OnHandQuantityRetrievedSuccessfully" xml:space="preserve">
+    <value>OnHandQuantity bilgisi başarıyla getirildi</value>
+  </data>
+  <data name="OnHandQuantityRetrievalError" xml:space="preserve">
+    <value>OnHandQuantity bilgisi getirilirken hata oluştu</value>
+  </data>
+  <data name="CariRetrievedSuccessfully" xml:space="preserve">
+    <value>Cari bilgileri başarıyla getirildi</value>
+  </data>
+  <data name="CariRetrievalError" xml:space="preserve">
+    <value>Cari bilgileri getirilirken hata oluştu</value>
+  </data>
+  <data name="StokRetrievedSuccessfully" xml:space="preserve">
+    <value>Stok bilgileri başarıyla getirildi</value>
+  </data>
+  <data name="StokRetrievalError" xml:space="preserve">
+    <value>Stok bilgileri getirilirken hata oluştu</value>
+  </data>
+  <data name="DepoRetrievedSuccessfully" xml:space="preserve">
+    <value>Depo bilgileri başarıyla getirildi</value>
+  </data>
+  <data name="DepoRetrievalError" xml:space="preserve">
+    <value>Depo bilgileri getirilirken hata oluştu</value>
+  </data>
+  <data name="ProjeRetrievedSuccessfully" xml:space="preserve">
+    <value>Proje bilgileri başarıyla getirildi</value>
+  </data>
+  <data name="ProjeRetrievalError" xml:space="preserve">
+    <value>Proje bilgileri getirilirken hata oluştu</value>
+  </data>
+  <data name="CustomerOrderRetrievedSuccessfully" xml:space="preserve">
+    <value>Müşteri sipariş bilgisi başarıyla getirildi</value>
+  </data>
+  <data name="CustomerOrderRetrievalError" xml:space="preserve">
+    <value>Müşteri sipariş bilgisi getirilirken hata oluştu</value>
+  </data>
+  <data name="OrderDetailRetrievedSuccessfully" xml:space="preserve">
+    <value>Sipariş detay bilgileri başarıyla getirildi</value>
+  </data>
+  <data name="OrderDetailRetrievalError" xml:space="preserve">
+    <value>Sipariş detay bilgileri getirilirken hata oluştu</value>
+  </data>
+  <data name="GrHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul Başlık bilgileri başarıyla getirildi</value>
+  </data>
+  <data name="GrHeaderRetrievalError" xml:space="preserve">
+    <value>Mal Kabul Başlık bilgileri getirilirken hata oluştu</value>
+  </data>
+  
+  <!-- GrImportDocument Messages -->
+  <data name="Success" xml:space="preserve">
+    <value>İşlem başarıyla tamamlandı</value>
+  </data>
+  <data name="Error_GetAll" xml:space="preserve">
+    <value>İçe aktarma belgeleri getirilirken hata oluştu</value>
+  </data>
+  <data name="Error_NotFound" xml:space="preserve">
+    <value>İçe aktarma belgesi bulunamadı</value>
+  </data>
+  <data name="Error_GetById" xml:space="preserve">
+    <value>İçe aktarma belgesi getirilirken hata oluştu</value>
+  </data>
+  <data name="Error_GetByHeaderId" xml:space="preserve">
+    <value>Başlık ID'sine göre içe aktarma belgeleri getirilirken hata oluştu</value>
+  </data>
+  <data name="Error_Create" xml:space="preserve">
+    <value>İçe aktarma belgesi oluşturulurken hata oluştu</value>
+  </data>
+  <data name="Error_Update" xml:space="preserve">
+    <value>İçe aktarma belgesi güncellenirken hata oluştu</value>
+  </data>
+  <data name="Success_Deleted" xml:space="preserve">
+    <value>İçe aktarma belgesi başarıyla silindi</value>
+  </data>
+  <data name="Error_Delete" xml:space="preserve">
+    <value>İçe aktarma belgesi silinirken hata oluştu</value>
+  </data>
+  <data name="Error_Exists" xml:space="preserve">
+    <value>İçe aktarma belgesi varlığı kontrol edilirken hata oluştu</value>
+  </data>
+  <data name="InvalidModelState" xml:space="preserve">
+    <value>Geçersiz model durumu</value>
+  </data>
+  <data name="UserNotFoundError" xml:space="preserve">
+    <value>Kullanıcı bilgisi bulunamadı</value>
+  </data>
+  <data name="ProfileRetrievedSuccessfully" xml:space="preserve">
+    <value>Profil bilgileri başarıyla alındı</value>
+  </data>
+  
+  <!-- GrLine Messages -->
+  <data name="GrLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul Satır bilgileri başarıyla alındı</value>
+  </data>
+  <data name="GrLineRetrievalError" xml:space="preserve">
+    <value>Mal Kabul Satır bilgileri alınırken hata oluştu</value>
+  </data>
+  <data name="GrLineNotFound" xml:space="preserve">
+    <value>Mal Kabul Satır bulunamadı</value>
+  </data>
+  <data name="GrLineCreatedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul Satır başarıyla oluşturuldu</value>
+  </data>
+  <data name="GrLineCreateError" xml:space="preserve">
+    <value>Mal Kabul Satır oluşturulurken hata oluştu</value>
+  </data>
+  <data name="GrLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul Satır başarıyla güncellendi</value>
+  </data>
+  <data name="GrLineUpdateError" xml:space="preserve">
+    <value>Mal Kabul Satır güncellenirken hata oluştu</value>
+  </data>
+  <data name="GrLineDeletedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul Satır başarıyla silindi</value>
+  </data>
+  <data name="GrLineDeleteError" xml:space="preserve">
+    <value>Mal Kabul Satır silinirken hata oluştu</value>
+  </data>
+  <data name="GrLineExistsCheckError" xml:space="preserve">
+    <value>Mal Kabul Satır varlığı kontrol edilirken hata oluştu</value>
+  </data>
+  <data name="GrHeaderNotFoundForLine" xml:space="preserve">
+    <value>Bu satır için Mal Kabul Başlık bulunamadı</value>
+  </data>
+  
+  <!-- Additional GrHeader Messages -->
+  <data name="GrHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul Başlığı başarıyla oluşturuldu</value>
+  </data>
+  <data name="GrHeaderCreateError" xml:space="preserve">
+    <value>Mal Kabul Başlığı oluşturulurken hata oluştu</value>
+  </data>
+  <data name="GrHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul Başlığı başarıyla güncellendi</value>
+  </data>
+  <data name="GrHeaderUpdateError" xml:space="preserve">
+    <value>Mal Kabul Başlığı güncellenirken hata oluştu</value>
+  </data>
+  <data name="GrHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul Başlığı başarıyla silindi</value>
+  </data>
+  <data name="GrHeaderDeleteError" xml:space="preserve">
+    <value>Mal Kabul Başlığı silinirken hata oluştu</value>
+  </data>
+  <data name="GrHeaderSoftDeletedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul Başlığı başarıyla pasif edildi</value>
+  </data>
+  <data name="GrHeaderSoftDeleteError" xml:space="preserve">
+    <value>Mal Kabul Başlığı pasif edilirken hata oluştu</value>
+  </data>
+  
+  <!-- Additional GrLine Messages -->
+  <data name="GrLineGetAllError" xml:space="preserve">
+    <value>Tüm Mal Kabul Satırları getirilirken hata oluştu</value>
+  </data>
+  <data name="GrLineGetByIdError" xml:space="preserve">
+    <value>ID ile Mal Kabul Satırı getirilirken hata oluştu</value>
+  </data>
+  <data name="GrLineGetByHeaderIdError" xml:space="preserve">
+    <value>Başlık ID ile Mal Kabul Satırları getirilirken hata oluştu</value>
+  </data>
+  
+  <!-- Additional GrImportDocument Messages -->
+  <data name="Error_InvalidHeaderId" xml:space="preserve">
+    <value>Geçersiz Başlık ID sağlandı</value>
+  </data>
+  <data name="Success_Created" xml:space="preserve">
+    <value>İthalat belgesi başarıyla oluşturuldu</value>
+  </data>
+  <data name="Success_Updated" xml:space="preserve">
+    <value>İthalat belgesi başarıyla güncellendi</value>
+  </data>
+  
+  <!-- GrImportSerialLine Messages -->
+  <data name="GrImportSerialLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul İthalat Seri Satırı bilgisi başarıyla getirildi</value>
+  </data>
+  <data name="GrImportSerialLineGetAllError" xml:space="preserve">
+    <value>Tüm Mal Kabul İthalat Seri Satırları getirilirken hata oluştu</value>
+  </data>
+  <data name="GrImportSerialLineNotFound" xml:space="preserve">
+    <value>Mal Kabul İthalat Seri Satırı bulunamadı</value>
+  </data>
+  <data name="GrImportSerialLineGetByIdError" xml:space="preserve">
+    <value>ID ile Mal Kabul İthalat Seri Satırı getirilirken hata oluştu</value>
+  </data>
+  <data name="GrImportSerialLineGetByImportLineIdError" xml:space="preserve">
+    <value>İthalat Satır ID ile Mal Kabul İthalat Seri Satırları getirilirken hata oluştu</value>
+  </data>
+  <data name="GrImportLNotFound" xml:space="preserve">
+    <value>Mal Kabul İthalat Satırı bulunamadı</value>
+  </data>
+  <data name="GrImportSerialLineCreatedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul İthalat Seri Satırı başarıyla oluşturuldu</value>
+  </data>
+  <data name="GrImportSerialLineCreateError" xml:space="preserve">
+    <value>Mal Kabul İthalat Seri Satırı oluşturulurken hata oluştu</value>
+  </data>
+  <data name="GrImportSerialLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul İthalat Seri Satırı başarıyla güncellendi</value>
+  </data>
+  <data name="GrImportSerialLineUpdateError" xml:space="preserve">
+    <value>Mal Kabul İthalat Seri Satırı güncellenirken hata oluştu</value>
+  </data>
+  <data name="GrImportSerialLineDeletedSuccessfully" xml:space="preserve">
+    <value>Mal Kabul İthalat Seri Satırı başarıyla silindi</value>
+  </data>
+  <data name="GrImportSerialLineDeleteError" xml:space="preserve">
+    <value>Mal Kabul İthalat Seri Satırı silinirken hata oluştu</value>
+  </data>
+  <data name="GrImportSerialLineExistsCheckCompleted" xml:space="preserve">
+    <value>Mal Kabul İthalat Seri Satırı varlık kontrolü tamamlandı</value>
+  </data>
+  <data name="GrImportSerialLineExistsCheckError" xml:space="preserve">
+    <value>Mal Kabul İthalat Seri Satırı varlık kontrolü sırasında hata oluştu</value>
+  </data>
+  
+  <!-- JWT Service Messages -->
+  <data name="TokenGeneratedSuccessfully" xml:space="preserve">
+    <value>Token başarıyla oluşturuldu</value>
+  </data>
+  <data name="TokenGenerationError" xml:space="preserve">
+    <value>Token oluşturulurken hata oluştu</value>
+  </data>
+  <data name="TokenGenerationFailedMessage" xml:space="preserve">
+    <value>Token oluşturma başarısız</value>
+  </data>
+  
+  <!-- Common Service Messages -->
+  <data name="DataRetrievedSuccessfully" xml:space="preserve">
+    <value>Veri başarıyla getirildi</value>
+  </data>
+  <data name="DataCreatedSuccessfully" xml:space="preserve">
+    <value>Veri başarıyla oluşturuldu</value>
+  </data>
+  <data name="DataUpdatedSuccessfully" xml:space="preserve">
+    <value>Veri başarıyla güncellendi</value>
+  </data>
+  <data name="DataDeletedSuccessfully" xml:space="preserve">
+    <value>Veri başarıyla silindi</value>
+  </data>
+  <data name="DataNotFound" xml:space="preserve">
+    <value>Veri bulunamadı</value>
+  </data>
+  <data name="ErrorRetrievingData" xml:space="preserve">
+    <value>Veri getirilirken hata oluştu</value>
+  </data>
+  <data name="ErrorCreatingData" xml:space="preserve">
+    <value>Veri oluşturulurken hata oluştu</value>
+  </data>
+  <data name="ErrorUpdatingData" xml:space="preserve">
+    <value>Veri güncellenirken hata oluştu</value>
+  </data>
+  <data name="ErrorDeletingData" xml:space="preserve">
+    <value>Veri silinirken hata oluştu</value>
+  </data>
+  <data name="ErrorOccurred" xml:space="preserve">
+    <value>Bir hata oluştu</value>
+  </data>
+  <data name="RecordNotFound" xml:space="preserve">
+    <value>Kayıt bulunamadı</value>
+  </data>
+  <data name="RecordCreatedSuccessfully" xml:space="preserve">
+    <value>Kayıt başarıyla oluşturuldu</value>
+  </data>
+  <data name="RecordUpdatedSuccessfully" xml:space="preserve">
+    <value>Kayıt başarıyla güncellendi</value>
+  </data>
+  <data name="RecordDeletedSuccessfully" xml:space="preserve">
+    <value>Kayıt başarıyla silindi</value>
+  </data>
+  <data name="UpdateSuccess" xml:space="preserve">
+    <value>Güncelleme başarıyla tamamlandı</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Silme işlemi başarıyla tamamlandı</value>
+  </data>
+  
+  <!-- UserAuthority Service Messages -->
+  <data name="NotFound" xml:space="preserve">
+    <value>Kayıt bulunamadı</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Kayıt başarıyla oluşturuldu</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Kayıt başarıyla güncellendi</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Kayıt başarıyla silindi</value>
+  </data>
+  
+  <!-- Additional Service Messages -->
+  <data name="RecordCreatedSuccessfully" xml:space="preserve">
+    <value>Kayıt başarıyla oluşturuldu</value>
+  </data>
+  <data name="RecordUpdatedSuccessfully" xml:space="preserve">
+    <value>Kayıt başarıyla güncellendi</value>
+  </data>
+  <data name="RecordDeletedSuccessfully" xml:space="preserve">
+    <value>Kayıt başarıyla silindi</value>
+  </data>
+  <data name="UpdateSuccess" xml:space="preserve">
+    <value>Güncelleme başarılı</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Silme başarılı</value>
+  </data>
+  
+  <!-- Auth Controller Messages -->
+  <data name="Error.User.InvalidCredentials" xml:space="preserve">
+    <value>Geçersiz kullanıcı adı veya şifre</value>
+  </data>
+  <data name="Success.User.LoginSuccessful" xml:space="preserve">
+    <value>Giriş başarılı</value>
+  </data>
+  <data name="Error.User.LoginFailed" xml:space="preserve">
+    <value>Giriş başarısız</value>
+  </data>
+</root>

@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "WMS Mobile V2",
+    "slug": "wms-mobile-v2",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "wms",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": false,
+    "main": "expo-router/entry",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.wms.mobilev2"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
+
+
